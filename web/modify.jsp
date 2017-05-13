@@ -16,16 +16,8 @@
     <body>
         <%@page import = "java.util.*" %>
         <%@page import="foodapp.*"%>
-        <%
-            ArrayList<String> errorsmsg = (ArrayList<String>) request.getAttribute("errors");
-            if (errorsmsg != null) {
-                out.println("<div><ol>");
-                for (String msg : errorsmsg) {
-                    out.println("<li>" + msg + "</li>");
-                }
-                out.println("<ol></div>");
-            }
-        %>
+        <%@include file = "checkAdmin.jsp" %>
+        <%@include file = "displayError.jsp" %>
         <form action="/FoodApp/modify-process.jsp" method="post">
             <%                FoodDAO fdao = new FoodDAO();
             

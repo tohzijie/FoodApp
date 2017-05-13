@@ -15,6 +15,9 @@
     <body>
         <%@page import = "java.util.*" %>
         <%@page import="foodapp.*"%>
+        <a href="/FoodApp/logout.jsp"> Logout </a>
+        <%@include file = "checkAdmin.jsp" %>
+        
         <table border ='0'> <tr> <th>Name</th><th>Available?</th><th>Price</th></tr>
 
             <%

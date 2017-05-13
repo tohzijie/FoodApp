@@ -24,8 +24,8 @@ public class ConnectionManager {
     private static String dbURL;
 
     static {
+        dbURL = "jdbc:sqlserver://myfirstjsp.database.windows.net:1433;database=foodapp;user=tohzj@myfirstjsp;password=AdminAdmin!;encrypt=true;trustServerCertificate=true;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
 
-                    dbURL = "jdbc:sqlserver://myfirstjsp.database.windows.net:1433;database=foodapp;user=tohzj@myfirstjsp;password=AdminAdmin!;encrypt=true;trustServerCertificate=true;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
 
     }
 

@@ -13,16 +13,8 @@
         <title>Add Food</title>
     </head>
     <body>
-        <%
-            ArrayList<String> errorsmsg = (ArrayList<String>) request.getAttribute("errors");
-            if (errorsmsg != null) {
-                out.println("<div><ol>");
-                for (String msg : errorsmsg) {
-                    out.println("<li>" + msg + "</li>");
-                }
-                out.println("<ol></div>");
-            }
-        %>
+        <%@include file = "checkAdmin.jsp" %>
+        <%@include file = "displayError.jsp" %>
         <form action="/FoodApp/add-process.jsp" method="post">
             Name: <input type="text" name="name" value="<% 
                 if(request.getAttribute("oname")!=null){

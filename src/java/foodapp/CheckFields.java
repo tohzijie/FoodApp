@@ -30,5 +30,17 @@ public class CheckFields {
         }
         return errorMsg;
     }
+    
+    public static List<String> passwordChecker(String user, String pass) {
+        List<String> errorMsg = new ArrayList<>();
+        if (user == null || user.isEmpty()) {
+            errorMsg.add("User empty");
+        }
+        if (pass == null || pass.isEmpty()) {
+            errorMsg.add("Password empty");
+        }
+        
+        return errorMsg;
+    }
 
 }
